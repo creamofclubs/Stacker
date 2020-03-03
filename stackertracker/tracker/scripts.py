@@ -4,7 +4,7 @@ import pandas as pd
 import datetime as dt
 
 metals = ['XAU','XAG']
-currencies = ['USD','GBP']
+currencies = ['USD','GBP','EUR']
 
 base_url = 'https://www.exchangerates.org.uk/commodities/'
 base = r.get(base_url)
