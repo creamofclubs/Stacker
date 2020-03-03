@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Metals(models.Model):
-    metal_short = models.CharField(max_length=30, unique=True)
-    metal_name = models.CharField(max_length=25, unique=True)
+    metal_short = models.CharField(max_length=3, unique=True)
+    metal_name = models.CharField(max_length=25)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
