@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup as bs
-from stackertracker.tracker.models import Price_List, Metals, Currencies
+from .models import Price_List, Metals, Currencies
 import requests as r
 import pandas as pd
 import datetime as dt
@@ -14,7 +14,7 @@ soup = bs(base.text, features="html.parser")
 
 def oz_to_gram(i):
     return float(i) / 31.10348
-
+#TODO ModuleNotFoundError: No module named '__main__.models'; '__main__' is not a package
 
 def get_data():
     df_data = []

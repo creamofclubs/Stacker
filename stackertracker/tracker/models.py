@@ -7,7 +7,7 @@ class Metals(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.metal_name
+        return self.metal_short
 
 class Currencies(models.Model):
     currency_short = models.CharField(max_length=3)
