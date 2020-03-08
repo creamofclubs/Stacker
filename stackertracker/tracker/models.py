@@ -7,7 +7,7 @@ class Metals(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.metal_short
+        return f'{self.metal_short} - {self.metal_name}'
 
 class Currencies(models.Model):
     currency_short = models.CharField(max_length=3)
@@ -21,7 +21,7 @@ class Price_List(models.Model):
     metal = models.ForeignKey(Metals, on_delete=models.CASCADE)
     currency = models.ForeignKey(Currencies, on_delete=models.CASCADE)
     date = models.DateField()
-    price = models.DecimalField(decimal_places=3)
+    price = models.DecimalField(decimal_places=3,max_digits= 6)
 
 
 
